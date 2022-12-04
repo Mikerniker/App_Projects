@@ -42,7 +42,8 @@
 - For Loops
 - List indexing - extract item on a list
 - Tuples
-- Type Conversion (int(), float(), string
+- Type Conversion (int(), float(), str(), 
+- Index Method, example: ```mylist.index('item')```
 
 ### Useful resources
 
