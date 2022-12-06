@@ -1,21 +1,27 @@
 todos = []
 
+todos = []
+
+
 while True:
-    user_action = input("Type add, show, edit, or exit: ").strip()
+    user_action = input("Type add, show, edit, complete, or exit: ").strip()
 
     match user_action:
         case 'add':
             todo = input("Enter a todo: ")
             todos.append(todo)
         case 'show':
-            for item in todos:
+            for index, item in enumerate(todos):
                 item = item.title()
-                print(item)
+                print(f"{index + 1}-{item}")
         case 'edit':
             number = int(input("Number of the todo to edit: "))
             number = number - 1
             new_todo = input("Add your new todo: ")
             todos[number] = new_todo
+        case 'complete':
+            number = int(input("Number of the todo to complete: "))
+            todos.pop(number-1)
         case 'exit':
             break
         case whatever:
@@ -23,3 +29,5 @@ while True:
 
 
 print("Bye!")
+
+
