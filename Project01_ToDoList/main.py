@@ -38,7 +38,15 @@ while True:
    
         case 'complete':
             number = int(input("Number of the todo to complete: "))
+
+            with open("todos.txt", "r") as file:
+                todos = file.readlines()
+         
             todos.pop(number-1)
+
+            with open("todos.txt", "w") as file:
+                todos = file.writelines(todos)
+
         case 'exit':
             break
         case whatever:
