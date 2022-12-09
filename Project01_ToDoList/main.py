@@ -6,7 +6,7 @@ while True:
             todo = input("Enter a todo: ") + "\n"
 
             with open("todos.txt", "r") as file:
-                todos = file.readlines()  #no need to close file anymore
+                todos = file.readlines()  
 
             todos.append(todo)
             
@@ -25,8 +25,17 @@ while True:
         case 'edit':
             number = int(input("Number of the todo to edit: "))
             number = number - 1
+            
+            with open("todos.txt", "r") as file:
+                todos = file.readlines()
+                
             new_todo = input("Add your new todo: ")
-            todos[number] = new_todo
+            todos[number] = new_todo + "\n"
+
+            with open("todos.txt", "w") as file:
+                file.writelines(todos)
+   
+   
         case 'complete':
             number = int(input("Number of the todo to complete: "))
             todos.pop(number-1)
