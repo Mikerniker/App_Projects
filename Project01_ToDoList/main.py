@@ -16,8 +16,9 @@ while True:
             file = open("todos.txt", "r")
             todos = file.readlines()
             file.close()
+
             for index, item in enumerate(todos):
-                item = item.title()
+                item = item.title().strip('\n')
                 print(f"{index + 1}-{item}")
 
         case 'edit':
