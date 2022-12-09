@@ -5,9 +5,11 @@ while True:
         case 'add':
             todo = input("Enter a todo: ") + "\n"
 
-            file = open("todos.txt", "r")
-            todos = file.readlines()
-            file.close()
+            with open("todos.txt", "r") as file:
+                todos = file.readlines()  #no need to close file anymore
+
+
+
             todos.append(todo)
             file = open('todos.txt', 'w')
             file.writelines(todos)
