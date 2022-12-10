@@ -13,7 +13,7 @@ while True:
         with open('todos.txt', 'w') as file:
             file.writelines(todos)
         
-    if 'show' in user_action:
+    elif 'show' in user_action:
 
         with open("todos.txt", "r") as file:
             todos = file.readlines()
@@ -22,7 +22,7 @@ while True:
             item = item.title().strip('\n')
             print(f"{index + 1}-{item}")
 
-    if 'edit' in user_action:
+    elif 'edit' in user_action:
         number = int(input("Number of the todo to edit: "))
         number = number - 1
         
@@ -36,7 +36,7 @@ while True:
             file.writelines(todos)
 
 
-    if 'complete' in user_action:
+    elif 'complete' in user_action:
         number = int(input("Number of the todo to complete: "))
 
         with open("todos.txt", "r") as file:
@@ -52,10 +52,10 @@ while True:
         message = f"Todo {todo_to_remove} was removed from the list"
         print(message)
     
-    if 'exit' in user_action:
+    elif 'exit' in user_action:
         break
 
-    if "whatever" in user_action:
+    else:
         print("Hey, you entered an unknown command.")
 
 
