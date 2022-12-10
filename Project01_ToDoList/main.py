@@ -23,7 +23,7 @@ while True:
             print(f"{index + 1}-{item}")
 
     elif 'edit' in user_action:
-        number = int(input("Number of the todo to edit: "))
+        number = int(user_action[5:])
         number = number - 1
         
         with open("todos.txt", "r") as file:
