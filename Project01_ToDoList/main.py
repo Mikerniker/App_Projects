@@ -1,7 +1,7 @@
 def get_todos():
     with open("todos.txt", "r") as file:
-            todos = file.readlines()  
-    return todos
+            todos_local = file.readlines()  
+    return todos_local 
 
 
 
