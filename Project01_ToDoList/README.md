@@ -45,6 +45,7 @@
 - Type Conversion (int(), float(), str(), 
 - Index Method, example: ```mylist.index('item')```
 - Functions with parameters and arguments
+- Creating modules
 
 ### Useful resources
 
