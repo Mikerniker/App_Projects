@@ -46,6 +46,8 @@
 - Index Method, example: ```mylist.index('item')```
 - Functions with parameters and arguments
 - Creating modules
+- Using constants
+- Using standard modules like time module with strftime
 
 ### Useful resources
 
